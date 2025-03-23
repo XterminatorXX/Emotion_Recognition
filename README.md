@@ -4,3 +4,5 @@
 ## Overview
 This project detects and recognizes common human emotions such as (happy, sad, neutral,surprised,angry) using opencv, pytorch and mediapipe
 
+## File Structure
+
