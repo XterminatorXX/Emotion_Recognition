@@ -1,41 +1,78 @@
-Emotion_Recognition
-A model to detect and recognize facial expressions and emotions in a real time video/webcam input environment
-## Overview
-This project detects and recognizes common human emotions such as happy, sad, neutral, surprised, and angry using OpenCV, PyTorch, and MediaPipe.
+# 😃 Emotion Recognition
 
-## File Structure
-|-csv_files <br>
-|  &nbsp;&nbsp;|-data.csv (original data , shared the link in acknowledgements)<br>
-|  &nbsp;&nbsp;|-landmarks.csv (Repo doesn't contain this file due to size limit restrictions but the code for building this file is available in data_preparation.ipynb)<br>
-|-models<br>
-|  &nbsp;&nbsp;|-emotion_model_weights.pth (classification model)<br>
-|  &nbsp;&nbsp;|-one_hot_encoder.pkl (one_hot_encoder)<br>
-|  &nbsp;&nbsp;|-scaler.pkl (scaler)<br>
-|-LICENSE<br>
-|-README.md <br>
-|-classifier.ipynb (classification mdoel)<br>
-|-data_preparation.ipynb (data preprocessing and preparation)<br>
-|-utils.py (contains helper functions)<br>
-|-webcam_deployment.py (deployment file)<br>
+A real-time facial expression recognition system using **OpenCV**, **PyTorch**, and **MediaPipe**.
 
-## Usage
-Run the webcam deployment script to start emotion recognition:<br>
-## Features
-Real-time facial emotion recognition<br>
-Detection of 5 common emotions: happy, sad, neutral, surprised, angry<br>
-Facial landmark detection using MediaPipe<br>
-ML classification model built with PyTorch<br>
+---
 
-## Requirements
+## 📌 Overview
 
-Python 3.9<br>
-OpenCV<br>
-PyTorch<br>
-MediaPipe<br>
-NumPy<br>
-Pandas<br>
-scikit-learn<br>
+This project detects and recognizes common human emotions such as:
 
-## Acknowledgements and copyrights
-Original dataset: https://www.kaggle.com/datasets/karthickmcw/emotion-recognition-dataset <br>
-MediaPipe for facial landmark detection<br>
+- 😊 Happy  
+- 😢 Sad  
+- 😐 Neutral  
+- 😲 Surprised  
+- 😠 Angry  
+
+It uses facial landmark detection and a trained PyTorch classifier to perform real-time inference through a webcam.
+
+---
+
+## 📁 File Structure
+
+emotion_recognition/ <br>
+├── csv_files/<br>
+│   ├── data.csv              # Original raw dataset <br>
+│   └── landmarks.csv         # Preprocessed facial landmarks (not included due to size)<br>
+│<br>
+├── models/<br>
+│   ├── emotion_model_weights.pth   # Trained PyTorch model<br>
+│   ├── one_hot_encoder.pkl         # Saved encoder<br>
+│   └── scaler.pkl                  # Scaler for normalization<br>
+│<br>
+├── classifier.ipynb         # Emotion classification model training<br>
+├── data_preparation.ipynb   # Data preprocessing and landmark extraction<br>
+├── webcam_deployment.py     # Real-time webcam emotion detection<br>
+├── utils.py                 # Helper functions<br>
+├── LICENSE<br>
+└── README.md<br>
+
+
+---
+
+## 🚀 Usage
+
+To run the real-time webcam emotion recognition:
+python webcam_deployment.py
+
+## 💡 Features
+- 🕵️‍♂️ Real-time emotion detection from webcam  
+- 🎭 Recognizes 5 basic human emotions  
+- 🧠 Lightweight ML model built using PyTorch  
+- 👁️ Facial landmark detection via MediaPipe  
+- 📉 Preprocessing pipeline with normalization and one-hot encoding  
+
+---
+
+## 🧰 Requirements
+
+Make sure you have Python 3.9 and install the required packages using this command:
+
+pip install opencv-python mediapipe torch numpy pandas scikit-learn
+
+---
+
+## 📦 Dataset
+
+Original dataset used for training:
+
+📂 [Kaggle Emotion Recognition Dataset](https://www.kaggle.com/datasets/karthickmcw/emotion-recognition-dataset)
+
+---
+
+## 🙏 Acknowledgements
+
+- [MediaPipe](https://mediapipe.dev) for efficient and accurate facial landmark detection  
+- [Karthick MCW's Kaggle dataset](https://www.kaggle.com/datasets/karthickmcw/emotion-recognition-dataset)
+
+
