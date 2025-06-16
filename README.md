@@ -20,7 +20,6 @@ This project detects and recognizes common human emotions such as happy, sad, ne
 
 ## Usage
 Run the webcam deployment script to start emotion recognition:<br>
-bashCopypython webcam_deployment.py<br>
 ## Features
 Real-time facial emotion recognition<br>
 Detection of 5 common emotions: happy, sad, neutral, surprised, angry<br>
